@@ -13,7 +13,7 @@ public class AirPort
     {
         this.name = name;
         this.onAir = onAir;
-        this.onEarth.add(new Plane(1));
+        this.onEarth = onEarth;
         this.isFree = isFree;
     }
 
