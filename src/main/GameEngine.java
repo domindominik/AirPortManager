@@ -16,6 +16,19 @@ public class GameEngine
 
     public void makeMove()
     {
+        int index = random.nextInt(airPorts.size());
 
+        if (airPorts.get(index).getOnEarth().size() > 0)
+        {
+            int destination = random.nextInt(airPorts.size());
+            if (airPorts.get(destination).getOnEarth().size() < 4);
+            {
+                if (index != destination)
+                {
+                    airPorts.get(index).getOnEarth().remove(airPorts.size() - 1);
+                    airPorts.get(destination).getOnEarth().add(airPorts.get(index).getOnEarth().get(airPorts.get(index).getOnEarth().size() - 1));
+                }
+            }
+        }
     }
 }

@@ -5,14 +5,12 @@ import java.util.List;
 public class AirPort
 {
     private String name;
-    private List<Plane> onAir;
     private List<Plane> onEarth;
     private boolean isFree;
 
     public AirPort(String name)
     {
         this.name = name;
-        this.onAir = onAir;
         this.onEarth = onEarth;
         this.isFree = isFree;
     }
@@ -22,10 +20,6 @@ public class AirPort
         return name;
     }
 
-    public List<Plane> getOnAir()
-    {
-        return onAir;
-    }
 
     public List<Plane> getOnEarth()
     {
@@ -42,13 +36,9 @@ public class AirPort
         this.name = name;
     }
 
-    public void setOnAir(List<Plane> onAir)
-    {
-        this.onAir = onAir;
-    }
     public void addOnair(Plane plane)
     {
-        onAir.add(plane);
+        onEarth.add(plane);
     }
     public void setOnEarth(List<Plane> onEarth)
     {
@@ -64,11 +54,16 @@ public class AirPort
         isFree = free;
     }
 
+    public void addPlane(Plane plane)
+    {
+        onEarth.add(plane);
+    }
+
     public void printInfo()
     {
         System.out.println("Name: " + name +
-                ", Planes on earth: " + onEarth.size() +
-                ", Planes on air: " + onAir.size());
+                ", Planes on earth: " + onEarth.size());
+
     }
 
 }

@@ -7,12 +7,13 @@ public class Plane
     private AirPort start;
     private AirPort stop;
 
-    public Plane(int id)
+    public Plane()
     {
         this.id = id;
         this.isFlying = false;
         this.start = start;
         this.stop = null;
+
     }
 
     public int getId()

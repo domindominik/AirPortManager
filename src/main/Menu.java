@@ -19,7 +19,7 @@ public class Menu
         System.out.println("Set airports quantity");
         int quantity = scanner.nextInt();
 
-        Plane plane = new Plane(0);
+        Plane plane = new Plane();
         List<AirPort> airPortList = new ArrayList<>();
         List<Plane> onAir;
 
